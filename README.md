@@ -13,7 +13,9 @@ func loop2() {
 		fmt.Printf("Loop")
 	}
 }
+```
 
+```
 func loop3() {
 	for i := 1; i <= 5; i++ {
 		if i%2 != 0 {
