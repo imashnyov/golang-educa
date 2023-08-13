@@ -14,7 +14,7 @@ func loop2() {
 	}
 }
 ```
-### more loop's options
+#### more loop's options
 ```
 func loop3() {
 	for i := 1; i <= 5; i++ {
@@ -97,4 +97,14 @@ func main() {
 		fmt.Println("Right!")
 	}
 }
+```
+# Array
+```
+func main() {
+	array := [3]string{"Denis", "Kate", "John"}
+	for i := 0; i < len(array); i++ {
+		fmt.Println(names[i])
+	}
+}
+// array := [3][4]int{{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}}
 ```
