@@ -1,4 +1,4 @@
-## Loop
+# Loop
 
 func loop1() {
 	for i := 1; i <= 5; i++ {
@@ -6,7 +6,7 @@ func loop1() {
 	}
 }
 
-# ∞
+#### ∞
 func loop2() {
 	for {
 		fmt.Printf("Loop")
@@ -31,7 +31,7 @@ func loop4() {
 	}
 }
 
-# while loop
+#### while loop
 func loop6() {
 	i := 0
 	for i < 5 {
@@ -47,7 +47,7 @@ func loop7() {
 	}
 }
 
-## Switch
+# Switch
 func main() {
 	name := "John"
 
@@ -63,7 +63,7 @@ func main() {
 	}
 }
 
-# Switch fallthrough 
+#### Switch fallthrough 
 func main() {
 	number := 10
 
