@@ -1,4 +1,4 @@
-## Loops
+## Loop
 
 func loop1() {
 	for i := 1; i <= 5; i++ {
@@ -47,4 +47,31 @@ func loop7() {
 	}
 }
 
-##
+## Switch
+func main() {
+	name := "John"
+
+	switch name {
+	case "Jordan":
+		fmt.Println("Wrong")
+	case "Kate":
+		fmt.Println("Wrong")
+	case "John":
+		fmt.Println("Hello John!")
+	default:
+		fmt.Println("Something else wrong!")
+	}
+}
+
+# Switch fallthrough 
+func main() {
+	number := 10
+
+	switch {
+	case number > 1:
+		fmt.Println("Number is greater than 1")
+		fallthrough
+	case number > 11:
+		fmt.Println("Number < 11")
+	}
+}
