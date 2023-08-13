@@ -79,3 +79,20 @@ func main() {
 	}
 }
 ```
+# Logical operators
+```
+func main() {
+	a := 3
+	b := 10
+
+	if a > 1 && b > 9 {
+		fmt.Println("Right!")
+	}
+	if a > 2 || b > 9 {
+		fmt.Println("Right!")
+	}
+	if a != 2 {
+		fmt.Println("Right!")
+	}
+}
+```
