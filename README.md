@@ -14,7 +14,7 @@ func loop2() {
 	}
 }
 ```
-
+### more loop's options
 ```
 func loop3() {
 	for i := 1; i <= 5; i++ {
