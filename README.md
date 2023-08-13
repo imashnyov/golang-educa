@@ -7,6 +7,7 @@ func loop1() {
 }
 ```
 #### ∞
+```
 func loop2() {
 	for {
 		fmt.Printf("Loop")
@@ -46,8 +47,9 @@ func loop7() {
 		fmt.Println(nums[i])
 	}
 }
-
+```
 # Switch
+```
 func main() {
 	name := "John"
 
@@ -62,8 +64,9 @@ func main() {
 		fmt.Println("Something else wrong!")
 	}
 }
-
+```
 #### Switch fallthrough 
+```
 func main() {
 	number := 10
 
@@ -75,3 +78,4 @@ func main() {
 		fmt.Println("Number < 11")
 	}
 }
+```
