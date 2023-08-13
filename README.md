@@ -1,11 +1,11 @@
 # Loop
-
+```
 func loop1() {
 	for i := 1; i <= 5; i++ {
 		fmt.Printf("Hello %d\n", i)
 	}
 }
-
+```
 #### ∞
 func loop2() {
 	for {
