@@ -1,3 +1,12 @@
+# Formatting strings
+```
+name := "John"
+var age int = 30
+value := 1000.476
+a := true
+
+fmt.Printf("My name is %s.\nMy age is %d.\nI have %f$.\n%t", name, age, value, a)
+```
 # Loop
 ```
 for i := 1; i <= 5; i++ {
@@ -103,12 +112,29 @@ for _, element := range slice {
 	fmt.Printf("%d\n", element)
 }
 ```
-# Formatting strings
+# Maps
 ```
-name := "John"
-var age int = 30
-value := 1000.476
-a := true
+/*
+money = map[string]int{
+	"dollars":         800,
+	"euros":           300,
+	"uah":             36600,
+	"a_first_element": 1,
+}
+*/
+var money map[string]int = map[string]int{
+	"dollars":         800,
+	"euros":           300,
+	"uah":             36600,
+	"a_first_element": 1,
+}
+fmt.Println(money)
+fmt.Println(money["dollars"])
+money["dollars"] = 820
+delete(money, "a_first_element")
+fmt.Println(money)
 
-fmt.Printf("My name is %s.\nMy age is %d.\nI have %f$.\n%t", name, age, value, a)
+// Find in map
+element, status := money["dollars"]
+fmt.Println(element, status)
 ```
