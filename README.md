@@ -7,6 +7,21 @@ a := true
 
 fmt.Printf("My name is %s.\nMy age is %d.\nI have %f$.\n%t", name, age, value, a)
 ```
+# Logical operators
+```
+a := 3
+b := 10
+
+if a > 1 && b > 9 {
+	fmt.Println("Right!")
+}
+if a > 2 || b > 9 {
+	fmt.Println("Right!")
+}
+if a != 2 {
+	fmt.Println("Right!")
+}
+```
 # Loop
 ```
 for i := 1; i <= 5; i++ {
@@ -73,21 +88,6 @@ case number > 11:
 	fmt.Println("Number < 11")
 }
 ```
-# Logical operators
-```
-a := 3
-b := 10
-
-if a > 1 && b > 9 {
-	fmt.Println("Right!")
-}
-if a > 2 || b > 9 {
-	fmt.Println("Right!")
-}
-if a != 2 {
-	fmt.Println("Right!")
-}
-```
 # Array
 ```
 array := [3]string{"Denis", "Kate", "John"}
@@ -137,4 +137,48 @@ fmt.Println(money)
 // Find in map
 element, status := money["dollars"]
 fmt.Println(element, status)
+```
+# Functions
+```
+func sum(a int, b int) int {
+	result := a + b
+	return result
+}
+
+func main() {
+	value := sum(5, 9)
+	fmt.Println(value)
+}
+```
+
+```
+func math_func(a int, b int) (int, int, int, int) {
+	sum := a + b
+	sub := a - b
+	mul := a * b
+	div := a / b
+
+	return sum, sub, mul, div
+}
+
+func main() {
+	sum, sub, mul, div := math_func(3, 5)
+	fmt.Println(sum, sub, mul, div)
+}
+
+// Better return format
+func math_func(a int, b int) (sum int, sub int, mul int, div int) {
+	sum = a + b
+	sub = a - b
+	mul = a * b
+	div = a / b
+
+	return
+}
+
+func main() {
+	sum, sub, mul, div := math_func(3, 5)
+	fmt.Println(sum, sub, mul, div)
+}
+
 ```
