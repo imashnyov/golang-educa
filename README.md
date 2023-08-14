@@ -95,4 +95,20 @@ slice = append(slice, 0)
 slice[0] = 0
 sort.Ints(slice)
 fmt.Println(slice)
+
+//range slice
+slice := []int{1, 6, 3, 8, 9, 0, 1, 2, 7}
+
+for _, element := range slice {
+	fmt.Printf("%d\n", element)
+}
+```
+# Formatting strings
+```
+name := "John"
+var age int = 30
+value := 1000.476
+a := true
+
+fmt.Printf("My name is %s.\nMy age is %d.\nI have %f$.\n%t", name, age, value, a)
 ```
