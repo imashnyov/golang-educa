@@ -181,4 +181,42 @@ func main() {
 	fmt.Println(sum, sub, mul, div)
 }
 
+func main() {
+	a := func(x string, y string) string {
+		return x + y
+	}
+	result := a("Hi ", "there!")
+	fmt.Println(result)
+}
+```
+# Pointer
+```
+func changer(str *string) {
+	*str = "Bye!"
+}
+
+func main() {
+	s := "Hello!"
+	fmt.Println(s)
+	// var pointer *string = &s
+	// changer(pointer)
+	changer(&s)
+	fmt.Println(s)
+}
+```
+# Structure
+```
+func changer(u *User) {
+	u.name = "Kate"
+}
+
+func main() {
+	//var John User = User{name: "John", age: 87, password: "123456"}
+	John := User{"John", 87, "123456"}
+	fmt.Println(John)
+	John.name = "Mark"
+	fmt.Println(John.name)
+	changer(&John)
+	fmt.Println(John)
+}
 ```
