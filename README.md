@@ -22,7 +22,7 @@ if a != 2 {
 	fmt.Println("Right!")
 }
 ```
-# Loop
+# Loops
 ```
 for i := 1; i <= 5; i++ {
 	fmt.Printf("Hello %d\n", i)
@@ -61,7 +61,7 @@ for i := 0; i < len(nums); i++ {
 	fmt.Println(nums[i])
 }
 ```
-# Switch
+# Switches
 ```
 name := "John"
 
@@ -76,7 +76,7 @@ default:
 	fmt.Println("Something else wrong!")
 }
 ```
-#### Switch fallthrough 
+#### Switch's fallthrough 
 ```
 number := 10
 
@@ -88,7 +88,7 @@ case number > 11:
 	fmt.Println("Number < 11")
 }
 ```
-# Array
+# Arrays
 ```
 array := [3]string{"Denis", "Kate", "John"}
 for i := 0; i < len(array); i++ {
@@ -97,7 +97,7 @@ for i := 0; i < len(array); i++ {
 
 // array := [3][4]int{{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}}
 ```
-# Slice
+# Slices
 ```
 slice := []int{3, 1, 2, 5, 4, 7}
 slice = append(slice, 0)
@@ -189,7 +189,7 @@ func main() {
 	fmt.Println(result)
 }
 ```
-# Pointer
+# Pointers
 ```
 func changer(str *string) {
 	*str = "Bye!"
@@ -204,7 +204,7 @@ func main() {
 	fmt.Println(s)
 }
 ```
-# Structure
+# Structures
 ```
 type User struct {
 	name     string
@@ -226,7 +226,7 @@ func main() {
 	fmt.Println(John)
 }
 ```
-#### Structure methods
+#### Structure's methods
 ```
 type User struct {
 	name     string
@@ -262,7 +262,7 @@ func main() {
 	fmt.Println(user.isElder())
 }
 ```
-# Interface
+# Interfaces
 ```
 type Numbers struct {
 	num1 int
@@ -300,5 +300,38 @@ func main() {
 	fmt.Printf("Sum: %d\n", i.Multiply())
 	fmt.Printf("Sum: %f\n", i.Division())
 	fmt.Printf("Sum: %d\n", i.Substract())
+}
+```
+# Goroutines
+```
+func main() {
+	ch := make(chan string)
+	
+	go say("Hello Go!", ch)
+	fmt.Println(<-ch)
+}
+
+func say(greet string, ch chan string) {
+	ch <- greet
+}
+```
+
+```
+func main() {
+	ch := make(chan int)
+
+	go say("Hello Go!", ch)
+
+	for x := range ch {
+		fmt.Println(x)
+	}
+}
+
+func say(greet string, ch chan int) {
+	for i := 0; i <= 5; i++ {
+		ch <- i
+	}
+
+	close(ch)
 }
 ```
