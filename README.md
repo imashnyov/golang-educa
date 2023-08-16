@@ -41,12 +41,14 @@ for i := 1; i <= 5; i++ {
 		continue
 	}
 	fmt.Println(i)
+}
 
 for i := 1; i <= 5; i++ {
 	if i%2 != 0 {
 		break
 	}
 	fmt.Println(i)
+}
 ```
 #### while loop
 ```
@@ -334,4 +336,21 @@ func say(greet string, ch chan int) {
 
 	close(ch)
 }
+```
+# Goto
+```
+func main() {
+    learnGoTo()
+}
+
+func learnGoTo() {
+    fmt.Println("a")
+    goto FINISH
+    fmt.Println("b")
+FINISH:
+    fmt.Println("c")
+}
+
+// a
+// c
 ```
