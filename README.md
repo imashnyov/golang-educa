@@ -1,3 +1,11 @@
+# Define variable
+```
+s := "" // better to use
+var s string // better to use
+
+var s = ""
+var s string = ""
+```
 # Formatting strings
 ```
 name := "John"
