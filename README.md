@@ -1,7 +1,7 @@
 # Define variable
 ```
-s := "" // better to use
-var s string // better to use
+s := "" // practically use
+var s string // practically use
 
 var s = ""
 var s string = ""
