@@ -10,6 +10,7 @@ var s string = ""
 ```
 break, case, chan, const, continue, for, import, interface, map, package, range, return, default, func, defer, go, else, goto, fallthrough, if, select, struct switch, type, var;
 ```
+# Predefined names
 #### Constants
 ```
 true, false, iota, nil;
