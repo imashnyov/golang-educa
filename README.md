@@ -6,6 +6,10 @@ var s string // practically use
 var s = ""
 var s string = ""
 ```
+# Reserved names
+```
+break, case, chan, const, continue, for, import, interface, map, package, range, return, default, func, defer, go, else, goto, fallthrough, if, select, struct switch, type, var;
+```
 # Formatting strings
 ```
 name := "John"
