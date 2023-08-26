@@ -21,7 +21,7 @@ Pick a number as an argument`
 func main() {
 	rand.Seed(time.Now().UnixNano())
 
-	args1, args2 := os.Args[1:2]
+	args := os.Args[1:]
 	if len(args) != 1 {
 		fmt.Printf("%s\n", usage)
 		return
