@@ -21,7 +21,7 @@ queries:
 				break search
 			}
 
-			if q == w {
+			if strings.ToLower(q) == strings.ToLower(w) {
 				fmt.Printf("#%-2d: %q\n", i+1, w)
 
 				continue queries
