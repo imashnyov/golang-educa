@@ -1,5 +1,16 @@
 [![Made in Ukraine](https://img.shields.io/badge/made_in-Ukraine-ffd700.svg?labelColor=0057b7)](https://stand-with-ukraine.pp.ua)
-
+# Common Go console commands
+```
+go doc fmt
+go run filename.go // go run . - if you have multiple Go source files in the same directory
+go build filename.go
+go install package_name // Compiles and installs a Go package or program. It places the binary in the $GOPATH/bin directory.
+go get github.com/user/package_name // Used to download and install Go packages from remote repositories
+go tidy // After running this command, your go.mod file will be updated to remove unused dependencies and potentially update version ranges to specific versions.
+go test // Used to run tests in your Go code. It automatically searches for files with names matching the pattern _test.go and executes test functions.
+go fmt filename.go
+go vet filename.go // It is a static analysis tool that checks your code for suspicious constructs or potential issues.
+```
 # Define variable
 ```
 s := "" // practically use
