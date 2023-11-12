@@ -10,6 +10,7 @@ go tidy // After running this command, your go.mod file will be updated to remov
 go test // Used to run tests in your Go code. It automatically searches for files with names matching the pattern _test.go and executes test functions.
 go fmt filename.go
 go vet filename.go // It is a static analysis tool that checks your code for suspicious constructs or potential issues.
+go tool dist list // shows supported combination for "go build"
 ```
 # Define variable
 ```
