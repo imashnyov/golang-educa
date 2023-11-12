@@ -392,3 +392,9 @@ FINISH:
 // a
 // c
 ```
+# Generics
+```
+func plusOne[V int | float64 | int64 | float32 | int32](t V) V {
+	return t + 1
+}
+```
