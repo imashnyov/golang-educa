@@ -398,3 +398,27 @@ func sum[V int | float64 | int64 | float32 | int32](t1 V, t2 V) V {
 	return t1 + t2
 }
 ```
+# Mutex (Mutual Exclusion)
+```
+type mytype struct {
+	counter int
+	mu      sync.Mutex
+}
+
+func main() {
+	mytypeInstance := mytype{}
+	finished := make(chan bool)
+	for i := 0; i < 10; i++ {
+		go func(mytypeInstance *mytype) {
+			mytypeInstance.mu.Lock() # Lock goroutines
+			mytypeInstance.counter++
+			finished <- true
+			mytypeInstance.mu.Unlock() # Unlock goroutines
+		}(&mytypeInstance)
+	}
+	for i := 0; i < 10; i++ {
+		<-finished
+	}
+	fmt.Printf("Counter: %d\n", mytypeInstance.counter)
+}
+```
