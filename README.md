@@ -394,7 +394,7 @@ FINISH:
 ```
 # Generics
 ```
-func plusOne[V int | float64 | int64 | float32 | int32](t V) V {
-	return t + 1
+func sum[V int | float64 | int64 | float32 | int32](t1 V, t2 V) V {
+	return t1 + t2
 }
 ```
